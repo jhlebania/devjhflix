@@ -1,25 +1,32 @@
-* {
-  box-sizing: border-box;
+* {    /* * reset de tela */
+  box-sizing: border-box; /* tamanho da caixa */
   font-family: 'Roboto', sans-serif;
 }
 
-:root {
+:root {   /* variáveis  - cadstro de algumas cores */
   --primary: #2A7AE4;
   --black: #000000;
   --blackLighter: #9E9E9E;
   --grayLight: #F5F5F5;
   --grayMedium: #e5e5e5; 
+  --grayDark: #141414;
   --white: #FFFFFF;
   --frontEnd: #6BD1FF;
   --backEnd: #00C86F;
 }
 
 html,
-body {
+body {  /* reset de margin */
   margin: 0;
   padding: 0;
 }
 
-a {
+a { /* cor do texto, sempre igual a do pai */
   color: inherit;
 } 
+
+#root {
+  min-height: calc(100vh - var(--bodyPaddingTop));
+  display: flex;
+  flex-direction: column;
+}
