@@ -8,6 +8,7 @@ function CadastroCategoria () {
         <h1>Cadastro de Categoria</h1>
       
         <form>
+
             <label>
                 Nome da Categoria:
                 <input
@@ -24,7 +25,7 @@ function CadastroCategoria () {
           Ir para home
         </Link>
       </PageDefault>
-    );
+    )
   }
 
   export default CadastroCategoria;

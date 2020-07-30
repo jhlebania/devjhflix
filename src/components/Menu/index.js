@@ -1,15 +1,12 @@
 import React from 'react';
-import Logo from '../../assets/img/Logo.png'
 import { Link } from 'react-router-dom';
+import Logo from '../../assets/img/Logo.png'
 import './Menu.css';
-//import ButtonLink from './components/ButtonLink';
-//import { LogoImage, MenuWrapper } from './style.js';
 import Button from '../Button';
+//import ButtonLink from './components/ButtonLink';
 
-function Menu()
-{
+function Menu(){
     return (
-    //<header>
     <nav className="Menu">
         <Link to="/">
         <img className="Logo" src={Logo} alt="JHFlix Logo"/>
@@ -19,9 +16,6 @@ function Menu()
             Novo vídeo
         </Button>
     </nav>
-    //    JHFlix Show!
-    //</header>
-
     );
 }
 
