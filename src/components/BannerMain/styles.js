@@ -1,12 +1,48 @@
 import styled from 'styled-components';
 
+export const BannerMainContainer = styled.section`
+  height: 80vh;
+  position: relative;
+  color: var(--white);
+  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`}; 
+  background-size: cover;
+  background-position: center;
+  @media (max-width: 800px) {
+    height: auto;
+    min-height: 50vh;
+  }
+
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 20%;
+  }
+
+  &:before {
+    top: 0;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+  }
+
+  &:after {
+    bottom: 0;
+    background: linear-gradient(0deg, #141414 0%, transparent 100%);
+  }
+`;
+
 export const ContentAreaContainer = styled.section`
+  align-items: center;
+  display: flex;
+  height: 100%;   
+  justify-content: center;
   margin-left: 5%;
   margin-right: 5%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    
   position: relative;
   z-index: 10;
   @media (max-width: 800px) {
@@ -64,61 +100,29 @@ ContentAreaContainer.Title = styled.h2`
     text-align: center;
   }
 `;
-
-export const BannerMainContainer = styled.section`
-  height: 80vh;
-  position: relative;
-  color: #fff;
-  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`}; 
-  background-size: cover;
-  background-position: center;
-  @media (max-width: 800px) {
-    height: auto;
-    min-height: 50vh;
-  }
-
-  &:after,
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 20%;
-  }
-
-  &:before {
-    top: 0;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-  }
-
-  &:after {
-    bottom: 0;
-    background: linear-gradient(0deg, #141414 0%, transparent 100%);
-  }
-`;
-
+// border: 1px solid transparent;
 export const WatchButton = styled.button`
-  font-family: 'Roboto', sans-serif;
-  box-sizing: border-box;
-  cursor: pointer;
-  padding: 16px 24px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  outline: none;
+  background: var(--white); 
+  border: 0;
   border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  border: 1px solid transparent;
   color: var(--black);
-  background: var(--white);
-  border-color: var(--black);
-  transition: opacity .3s;
+  cursor: pointer;
   display: none;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  outline: none;
+
+  border-color: var(--black);
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
   margin: 0 auto;
+  padding: 16px 24px;
+  text-decoration: none;
+  transition: opacity .3s;
+
   @media (max-width: 800px) {
     display: block;
   }

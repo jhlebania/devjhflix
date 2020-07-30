@@ -16,9 +16,8 @@ function CadastroCategoria () {
             </label>
 
             <button>
-                Caddastrar
+                Cadastrar
             </button>
-
         </form>
 
         <Link to='/'>
